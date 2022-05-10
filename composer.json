@@ -27,4 +27,7 @@
     "require": {
         "behat/behat": "^3.10"
     }
+    "autoload": {
+        "files": [ "advanced-custom-fields-wpcli.php" ]
+    }
 }
