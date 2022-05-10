@@ -1,5 +1,6 @@
 # WP-CLI for Advanced Custom Fields 
 
+## Note: [This fork of ACF WP-CLI makes it possible to install it as a WP-CLI package instead of a WordPress Plugin](#how-to-install)
 
 ### Description 
 
@@ -20,22 +21,9 @@ Fields can now easily be imported, exported and shared over SVN, GIT or comparab
 
 Install WP-CLI as described on [http://wp-cli.org/](http://wp-cli.org/ "WP-CLI")
 
-Using composer: (doesn't work for now until we have released the plugin on wordpress.org/plugins)
+Then install this package using WP-CLI:
 ```
-composer require wpackagist-plugin/advanced-custom-fields-wpcli
-```
-
-By GIT clone in plugins directory:
-```
-git clone https://github.com/hoppinger/advanced-custom-fields-wpcli.git
-```
-
-WordPress plugin installation:
-Download zip and put the files in the plugins directory.
-
-* Activate this plugin in the plugin menu or using:
-```
-wp plugin activate advanced-custom-fields-wpcli
+wp package install EP4/advanced-custom-fields-wpcli
 ```
 
 Go the wordpress directory in your terminal and run:
@@ -43,12 +31,6 @@ Go the wordpress directory in your terminal and run:
 wp acf
 ```
 To see if everything is working correctly.
-
-When the plugin is enabled, any exported field groups found on the filesystem in your registered paths will be added to Wordpress at runtime.
-If you would like to disable this behaviour you can remove the `acf_wpcli_register_groups` action:
-```
-remove_action('plugins_loaded', 'acf_wpcli_register_groups');
-```
 
 ## Commands 
 
